@@ -1,3 +1,11 @@
+## For Hiring Managers and Recruiters
+
+This README contains detailed setup steps, configurations, and troubleshooting notes.
+
+If you're looking for a quick, high-level overview of this project (architecture, goals, and outcomes), please see:
+
+**[Project Overview](./PROJECT_OVERVIEW.md)**
+
 Network Monitoring Homelab
 
 Host System 1
