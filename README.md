@@ -441,3 +441,19 @@ sudo systemctl daemon-reload
 Then running:
 sudo systemctl start prometheus
 sudo systemctl enable prometheus
+
+Stress Test example:
+
+While the In the 2nd VM, run:
+stress --vm 1 --vm-bytes 2G --timeout 30
+
+The Grafana dashboard should show a spike on the Memory Basic panel.
+
+To stress test the CPU, run:
+stress --cpu 2 --timeout 30
+
+The Grafana dashboard should show a spike on the CPU Basic panel.
+
+If the CPU Basic panel is empty, click the three dots>Edit and enter this in the query field:
+100 - (avg by(instance)(rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)
+
